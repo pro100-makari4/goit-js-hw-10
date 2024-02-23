@@ -1,5 +1,6 @@
 import flatpickr from 'flatpickr';
 import iziToast from 'izitoast';
+import errorIcon from '/img/error-icon.png';
 
 const startButton = document.querySelector('button[data-start]');
 const input = document.querySelector('#datetime-picker');
@@ -28,10 +29,6 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-const imgObjects = {
-  error: '/img/error-icon.png',
-};
-
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -41,7 +38,7 @@ const options = {
     if (selectedDate[0] < Date.now()) {
       iziToast.error({
         message: 'Please choose a date in the future',
-        iconUrl: imgObjects.error,
+        iconUrl: errorIcon,
         position: 'topRight',
         timeout: 3000,
         progressBar: false,
