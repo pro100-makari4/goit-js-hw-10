@@ -1,4 +1,6 @@
 import iziToast from 'izitoast';
+import errorIcon from '/img/error-icon.png';
+import successIcon from '/img/success-icon.png';
 
 const form = document.querySelector('.form');
 const inputDelay = document.querySelector('input[name="delay"]');
@@ -24,7 +26,7 @@ form.addEventListener('submit', event => {
         iziToast.show({
           message: result,
           title: 'Ok',
-          iconUrl: './img/success-icon.png',
+          iconUrl: successIcon,
           position: 'topRight',
           timeout: 3000,
           progressBar: false,
@@ -40,7 +42,7 @@ form.addEventListener('submit', event => {
         iziToast.error({
           title: 'Error',
           message: error,
-          iconUrl: './img/error-icon.png',
+          iconUrl: errorIcon,
           position: 'topRight',
           timeout: 3000,
           progressBar: false,
