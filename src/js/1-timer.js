@@ -29,7 +29,7 @@ function convertMs(ms) {
 }
 
 const imgObjects = {
-  error: './img/error-icon.png',
+  error: '/img/error-icon.png',
 };
 
 const options = {
