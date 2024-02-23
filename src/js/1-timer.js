@@ -37,8 +37,7 @@ const options = {
     if (selectedDate[0] < Date.now()) {
       iziToast.error({
         message: 'Please choose a date in the future',
-        iconUrl:
-          '/blob/main/src/img/error-icon.png',
+        iconUrl: './src/img/error-icon.png',
         position: 'topRight',
         timeout: 3000,
         progressBar: false,
@@ -78,7 +77,7 @@ function startTimer() {
       secondsElement.textContent = addLeadingZero(futureDateDifference.seconds);
     }
   }, 1000);
-  
+
   function addLeadingZero(value) {
     return value.toString().padStart(2, '0');
   }
