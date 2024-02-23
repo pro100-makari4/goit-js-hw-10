@@ -37,7 +37,8 @@ const options = {
     if (selectedDate[0] < Date.now()) {
       iziToast.error({
         message: 'Please choose a date in the future',
-        iconUrl: './img/error-icon.png',
+        iconUrl:
+          '/blob/main/src/img/error-icon.png',
         position: 'topRight',
         timeout: 3000,
         progressBar: false,
